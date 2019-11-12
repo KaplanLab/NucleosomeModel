@@ -1,0 +1,24 @@
+#attributes
+   NAME                    = LoadWeightMatrices
+
+   FILE                    = #undef
+
+   WEIGHT_MATRICES_NAME    = weight_matrices_group
+
+   OUTPUT_FILE             = #undef
+   
+   ALPHABET                = #undef
+   
+   ALPHABET_EFFECTIVE_SIZE = #undef
+   
+#end
+
+<Step
+   Type="LoadWeightMatrices" 
+   Name="$(NAME)"
+   File="$(FILE)"
+   WeightMatricesName="$(WEIGHT_MATRICES_NAME)"
+   #[ OutputFile="$(OUTPUT_FILE)" ]#
+   #[ Alphabet="$(ALPHABET)" ]#
+   #[ EffectiveAlphabetSize="$(ALPHABET_EFFECTIVE_SIZE)" ]# >
+</Step>

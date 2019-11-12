@@ -1,0 +1,171 @@
+#attributes
+   NAME                                         = WeightMatricesStats
+
+   MIN_SEQUENCE_LENGTH                          = #undef
+   SLIDING_WINDOW_LENGTH                        = #undef
+
+   REVERSE_COMPLEMENT                           = #undef
+
+   BACKGROUND_MARKOV_ORDER                      = #undef
+   BACKGROUND_MATRIX                            = #undef
+   BACKGROUND_MATRIX_FILE                       = #undef
+   BACKGROUND_TO_MATRICES_RATIO                 = #undef
+   USE_LOCAL_BACKGROUND                         = #undef
+   REGULATOR_SCALING_FACTOR                     = #undef
+   SCALING_FACTORS_PARAMETERS_FILE              = #undef
+   COOPERATIVITY_PARAMETERS_FILE                = #undef
+   MAX_COOPERATIVITY_DISTANCE                   = #undef
+   
+   GHMM_INST_TYPE                               = #undef   
+
+   TEMPERATURE                                  = #undef
+
+   STATS_TYPE                                   = #undef
+
+   SEQUENCE_GROUP_NAME                          = sequence_group
+   WEIGHT_MATRICES_NAME                         = weight_matrices_group
+   WEIGHT_MATRIX_NAME                           = #undef
+   WEIGHT_MATRIX_FLANK                          = #undef
+   PROCESS_WEIGHT_MATRICES_SEPARATELY           = #undef
+
+   FIND_BEST_ACROSS_WINDOWS                     = #undef
+   FIND_BEST_POSITION                           = #undef
+   SCORE_ALL_POSITIONS                          = #undef
+   DOUBLE_STRAND_BINDING                        = #undef
+
+   MAXIMUM_ALLOWED_SEQUENCE_INSERTS             = #undef
+   FORCE_DOUBLE_STRAND_ON_SEQUENCE_INSERT       = #undef
+   SEQUENCE_INSERT_PENALTY                      = #undef
+
+   MAX_TRAINING_ITERATIONS                      = #undef
+
+   MAX_PVALUE                                   = #undef
+   NUM_SIMULATIONS                              = #undef
+   OUTPUT_FILE_PRECISION                        = #undef
+
+   NUM_SAMPLES                                  = #undef
+   CONFIGURATION_ADJACENT_MATRICES_COUNTS       = #undef
+   SEQUENCE_FEATURE_DESCRIPTION                 = #undef
+   SINGLE_MATRICES_COUNTS                       = #undef
+   ALL_MATRICES_COUNTS                          = #undef
+   CONFIGURATION_PROBABILITIES                  = #undef
+   CONFIGURATION_MATRICES_COVERAGE              = #undef
+
+   MIN_HIGH_OCCUPANCY_SITES                     = #undef
+   WEIGHT_MATRIX_CLUSTERING_NUM_MATRICES        = #undef
+   WEIGHT_MATRIX_CLUSTERING_DISTANCE_WINDOW     = #undef
+   WEIGHT_MATRIX_CLUSTERING_DISTANCE_INCREMENT  = #undef
+
+   MIN_ADJACENT_MATRICES_DISTANCE               = #undef
+   MAX_ADJACENT_MATRICES_DISTANCE               = #undef
+   ADJACENT_MATRICES_DISTANCE_INCREMENT         = #undef
+   ADJACENT_MATRICES_STATS_TYPE                 = #undef
+   ADJACENT_MATRICES_FUNCTION                   = #undef
+   ADJACENT_MATRICES_FUNCTION_MEAN              = #undef
+   ADJACENT_MATRICES_FUNCTION_STD               = #undef
+
+   MIN_SCORE                                    = #undef
+   MIN_AVERAGE_OCCUPANCY                        = #undef
+   MAX_AVERAGE_OCCUPANCY                        = #undef
+   SEQUENCE_STATS                               = #undef
+   PRINT_SUM_WEIGHT_MATRICES                    = #undef
+   PRINT_SEPARATE_WEIGHT_MATRICES               = #undef
+   PRINT_CHV_FORMAT                             = #undef
+   MOVING_AVERAGE_WINDOW                        = #undef
+
+   OUTPUT_FILE                                  = #undef
+   
+   DONT_SORT_BY_SCORES                          = #undef
+#end
+
+<Step
+   Type="WeightMatricesStats" 
+   Name="$(NAME)"
+   SequenceGroupName="$(SEQUENCE_GROUP_NAME)"
+   WeightMatricesName="$(WEIGHT_MATRICES_NAME)"
+   GHMMInstType="$(GHMM_INST_TYPE)"
+   #[ MinSequenceLength="$(MIN_SEQUENCE_LENGTH)" ]#
+   #[ SlidingWindowLength="$(SLIDING_WINDOW_LENGTH)" ]#
+   #[ WeightMatrixName="$(WEIGHT_MATRIX_NAME)" ]#
+   #[ ProcessWeightMatricesSeparately="$(PROCESS_WEIGHT_MATRICES_SEPARATELY)" ]#
+   OutputFile="$(OUTPUT_FILE)"
+   #[ OutputFilePrecision="$(OUTPUT_FILE_PRECISION)" ]#
+   #[ ReverseComplement="$(REVERSE_COMPLEMENT)" ]#
+   #[ BackgroundMarkovOrder="$(BACKGROUND_MARKOV_ORDER)" ]#
+   #if (#exists($(BACKGROUND_MATRIX_FILE)))
+      BackgroundMatrix="$(BACKGROUND_MATRIX)"
+   #end
+   #[ BackgroundToMatricesRatio="$(BACKGROUND_TO_MATRICES_RATIO)" ]#
+   #[ Temperature="$(TEMPERATURE)" ]#
+   #[ UseLocalBackground="$(USE_LOCAL_BACKGROUND)" ]#
+   #[ RegulatorScalingFactor="$(REGULATOR_SCALING_FACTOR)" ]#
+   #[ ScalingFactorsParametersFile="$(SCALING_FACTORS_PARAMETERS_FILE)" ]#
+   #[ CooperativityParametersFile="$(COOPERATIVITY_PARAMETERS_FILE)" ]#
+   #[ MaxCooperativityDistance="$(MAX_COOPERATIVITY_DISTANCE)" ]#
+   #[ MaxPvalue="$(MAX_PVALUE)" ]#
+   #[ FindBestAcrossWindows="$(FIND_BEST_ACROSS_WINDOWS)" ]#
+   #[ FindBestPosition="$(FIND_BEST_POSITION)" ]#
+   #[ ScoreAllPositions="$(SCORE_ALL_POSITIONS)" ]#
+   #[ DoubleStrandBinding="$(DOUBLE_STRAND_BINDING)" ]#
+   #[ MaxAllowedSequenceInserts="$(MAXIMUM_ALLOWED_SEQUENCE_INSERTS)" ]#
+   #[ ForceDoubleStrandOnSequenceInsert="$(FORCE_DOUBLE_STRAND_ON_SEQUENCE_INSERT)" ]#
+   #[ SequenceInsertPenalty="$(SEQUENCE_INSERT_PENALTY)" ]#
+   #[ NumSimulations="$(NUM_SIMULATIONS)" ]#
+   #[ MaxIterations="$(MAX_TRAINING_ITERATIONS)" ]#
+   #[ NumSamples="$(NUM_SAMPLES)" ]#
+   #[ StatsType="$(STATS_TYPE)" ]#
+   #[ MinScore="$(MIN_SCORE)" ]#
+   #[ MinAverageOccupancy="$(MIN_AVERAGE_OCCUPANCY)" ]#
+   #[ MaxAverageOccupancy="$(MAX_AVERAGE_OCCUPANCY)" ]#
+   #[ MinHighOccupancySites="$(MIN_HIGH_OCCUPANCY_SITES)" ]#
+   #[ WeightMatrixFlank="$(WEIGHT_MATRIX_FLANK)" ]#
+   #[ WeightMatrixClusteringNumMatrices="$(WEIGHT_MATRIX_CLUSTERING_NUM_MATRICES)" ]#
+   #[ WeightMatrixClusteringDistanceWindow="$(WEIGHT_MATRIX_CLUSTERING_DISTANCE_WINDOW)" ]#
+   #[ WeightMatrixClusteringDistanceIncrement="$(WEIGHT_MATRIX_CLUSTERING_DISTANCE_INCREMENT)" ]#
+   #[ PrintSumWeightMatrices="$(PRINT_SUM_WEIGHT_MATRICES)" ]#
+   #[ PrintSeparateWeightMatrices="$(PRINT_SEPARATE_WEIGHT_MATRICES)" ]#
+   #[ PrintChvFormat="$(PRINT_CHV_FORMAT)" ]#
+   #[ MovingAverageWindow="$(MOVING_AVERAGE_WINDOW)" ]#
+   #[ SequenceStats="$(SEQUENCE_STATS)" ]#
+   #[ DontSortStatsByScores="$(DONT_SORT_BY_SCORES)" ]#
+   >
+
+   #if (#exists($(CONFIGURATION_ADJACENT_MATRICES_COUNTS)))
+     <ConfigurationStats Type="ConfigurationAdjacentMatricesCounts"
+       #[ MinAdjacentMatricesDistance="$(MIN_ADJACENT_MATRICES_DISTANCE)" ]#
+       #[ MaxAdjacentMatricesDistance="$(MAX_ADJACENT_MATRICES_DISTANCE)" ]#
+       #[ AdjacentMatricesDistanceIncrement="$(ADJACENT_MATRICES_DISTANCE_INCREMENT)" ]#
+       #[ AdjacentMatricesStatsType="$(ADJACENT_MATRICES_STATS_TYPE)" ]#
+       #[ FunctionType="$(ADJACENT_MATRICES_FUNCTION)" ]#
+       #[ Mean="$(ADJACENT_MATRICES_FUNCTION_MEAN)" ]#
+       #[ Std="$(ADJACENT_MATRICES_FUNCTION_STD)" ]#
+       >
+     </ConfigurationStats>
+   #end
+
+   #if (#exists($(ALL_MATRICES_COUNTS)))
+     <ConfigurationStats Type="ConfigurationAllMatricesCounts">
+     </ConfigurationStats>
+   #end
+
+   #if (#exists($(SEQUENCE_FEATURE_DESCRIPTION)))
+     <ConfigurationStats Type="ConfigurationDescription">
+     </ConfigurationStats>
+   #end
+
+   #if (#exists($(CONFIGURATION_MATRICES_COVERAGE)))
+     <ConfigurationStats Type="ConfigurationMatricesCoverage">
+     </ConfigurationStats>
+   #end
+
+   #if (#exists($(CONFIGURATION_PROBABILITIES)))
+     <ConfigurationStats Type="ConfigurationProbabilities">
+     </ConfigurationStats>
+   #end
+
+   #if (#exists($(SINGLE_MATRICES_COUNTS)))
+     <ConfigurationStats Type="ConfigurationSingleMatricesCounts">
+     </ConfigurationStats>
+   #end
+
+</Step>

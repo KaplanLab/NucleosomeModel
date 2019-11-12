@@ -1,0 +1,26 @@
+#attributes
+   NAME                    = LoadSequence
+
+   FILE                    = #undef
+
+   SEQUENCE_GROUP_NAME     = sequence_group
+   SEQUENCE_LIST           = #undef
+   PRELOAD_SEQUENCES       = #undef
+
+   OUTPUT_FILE             = #undef
+   
+   ALPHABET                = #undef
+   ALPHABET_EFFECTIVE_SIZE = #undef
+#end
+
+<Step
+   Type="LoadSequence" 
+   Name="$(NAME)"
+   File="$(FILE)"
+   SequenceGroupName="$(SEQUENCE_GROUP_NAME)"
+   #[ Alphabet="$(ALPHABET)" ]#
+   #[ EffectiveAlphabetSize="$(ALPHABET_EFFECTIVE_SIZE)" ]#
+   #[ SequenceList="$(SEQUENCE_LIST)" ]#
+   #[ PreloadSequences="$(PRELOAD_SEQUENCES)" ]#
+   #[ OutputFile="$(OUTPUT_FILE)" ]# >
+</Step>

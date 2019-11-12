@@ -1,0 +1,5 @@
+<WeightMatrices>
+<WeightMatrix Name="Background" Type="MarkovOrder" LeftPaddingPositions="0" RightPaddingPositions="0" Order="0">
+  <Order Markov="0" Weights="0.25;0.25;0.25;0.25"></Order>
+</WeightMatrix>
+</WeightMatrices>
