@@ -2,7 +2,7 @@
 
 __Full paper details:__
 
-The DNA-encoded nucleosome organization of a eukaryotic genome.  
+_The DNA-encoded nucleosome organization of a eukaryotic genome_  
 Kaplan N*, Moore IK*, Fondufe-Mittendorf Y, Gossett AJ, Tillo D, Field Y, LeProust EM, Hughes TR, Lieb JD, Widom J, Segal E.  
 Nature, 2009 458(7236):362-6. doi: 10.1038/nature07667
 
