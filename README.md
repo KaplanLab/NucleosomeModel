@@ -41,7 +41,7 @@ __Additional usage notes:__
 
 1. Use `perl nucleosome_prediction.pl –help` for more options.
 2. The code can only deal with nucleotides that are ACGT. For other nucleotides (e.g. N), one possible solution is to replace these with C, as it is relatively neutral. Still keep in mind that predictions made on such regions may be unreliable.
-3. It is important to remember that concentration effects are included in the model, and these can create strong long-reange positioning near boundaries. This means that it is better to make predictions on entire chromosomes and then extract specific regions of interest, or alternatively add >5 kb of flanking sequence to each region of interest in order to buffer any boundary effects.
+3. It is important to remember that concentration effects are included in the model, and these can create strong long-range positioning near boundaries. This means that it is better to make predictions on entire chromosomes and then extract specific regions of interest, or alternatively add >5 kb of flanking sequence to each region of interest in order to buffer any boundary effects.
 
 __Contact:__
 
