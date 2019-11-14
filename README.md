@@ -31,8 +31,8 @@ __Troubleshooting:__
 
 If the test output file is empty, it is usually due to its dependence on a linked library which is now old and thus missing from some libraries. To diagnose which library is missing on your system:
 
-1. Add the `XXX/lib/` directory to your LD_LIBRARY_PATH environment variable, where XXX is the folder where you installed the software (since some of the needed libraries are located there).
-2. Run “XXX/bin/map_learn_static”. You will get an error message showing you which library is missing.
+1. Add the `XXX/lib/` directory to your `LD_LIBRARY_PATH` environment variable, where XXX is the folder where you installed the software (since some of the needed libraries are located there).
+2. Run `XXX/bin/map_learn_static`. You will get an error message showing you which library is missing.
 3. Download the missing library.
 
 For example, if you use Centos 7, you should get an error message that you are missing `libstdc++.so.5`, and to get it you would use `yum install compat-libstdc++-33.x86_64`.
